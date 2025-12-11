@@ -18,4 +18,17 @@ if menu == 'luas persegi':
 elif menu == 'luas segitiga':
     st.write ('ini halaman untuk menghitung luas segitiga')
     st.markdown('Luas segitiga')
-    st.image('https://i.pinimg.com/736x/0e/d0/29/0ed0298f948ba076e1e7ee5501f56ffc.jpg', caption='gambar luas segitiga')
+    st.image('https://i.pinimg.com/736x/0e/d0/29/0ed0298f948ba076e1e7ee5501f56ffc.jpg', caption='gambar luas segitiga')
+    alas = st.number_input('silahkan masukan angka alas ' ,min_value=0)
+
+elif menu == 'luas lingkaran':
+    st.write('ini halaman untuk menghitung luas lingkaran')
+    st.markdown('Luas lingkaran')
+    st.image('https://i.pinimg.com/736x/0e/d0/29/0ed0298f948ba076e1e7ee5501f56ffc.jpg', caption='gambar luas lingkaran')
+    jari = st.number_input('Silahkan masukkan jari-jari lingkaran', min_value=0.0)
+    if st.button('Hitung'):
+        luas = 3.14 * jari * jari
+        st.write(f'Luas lingkaran adalah {luas}')
+
+
+    
