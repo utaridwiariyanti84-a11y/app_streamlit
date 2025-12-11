@@ -4,7 +4,7 @@ import streamlit as st
 st.title('aplikasi perhitungan luas bangung datar')
 st.header('ini buatan anak SI') 
 
-menu = st.sidebar.selectbox ('Pilih aplikasi', ['luas persegi', 'luas segitiga', 'luas lingkaran'])
+menu = st.sidebar.selectbox ('Pilih aplikasi', ['luas persegi', 'luas segitiga', 'luas lingkaran', 'luas jajar genjang'])
 
 if menu == 'luas persegi':
     st.write ('ini halaman untuk menghitung luas persegi')
@@ -29,6 +29,16 @@ elif menu == 'luas lingkaran':
     if st.button('Hitung'):
         luas = 3.14 * jari * jari
         st.write(f'Luas lingkaran adalah {luas}')
+
+elif menu == 'luas jajar genjang':
+    st.write('ini halaman untuk menghitung luas jajar genjang')
+    st.markdown('Luas jajar genjang')
+    st.image('https://i.pinimg.com/1200x/7e/11/16/7e1116b65eab976c92e9592d2f903cbf.jpg', caption='gambar jajar genjang')
+    alas = st.number_input('Silahkan masukkan alas jajar genjang', min_value=0.0)
+    tinggi = st.number_input('Silahkan masukkan tinggi jajar genjang', min_value=0.0)
+    if st.button('Hitung luas jajar genjang'):
+        luas = alas * tinggi
+        st.write(f'Luas jajar genjang adalah {luas}')
 
 
     
